@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+    <defs>
+      <linearGradient id="silver-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF"/>
+        <stop offset="30%" stop-color="#C0C0C0"/>
+        <stop offset="70%" stop-color="#E5E4E2"/>
+        <stop offset="100%" stop-color="#71717A"/>
+      </linearGradient>
+      <linearGradient id="neon-purple-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#9B5CFF"/>
+        <stop offset="100%" stop-color="#368BFF"/>
+      </linearGradient>
+      <radialGradient id="purple-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#9B5CFF" stop-opacity="0.8"/>
+        <stop offset="50%" stop-color="#368BFF" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#09090D" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="16" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="512" height="512" rx="48" fill="#09090D"/>
+    
+    <!-- Soft Purple/Blue Radial Glow behind frame -->
+    <circle cx="256" cy="256" r="210" fill="url(#purple-glow)" opacity="0.9" />
+
+    <!-- Outer Metallic Diamond/Hexagon Frame -->
+    <rect x="96" y="96" width="320" height="320" rx="40" transform="rotate(45 256 256)" 
+          fill="none" stroke="url(#silver-grad)" stroke-width="12" filter="url(#glow)"/>
+    
+    <!-- Inner Accent Frame -->
+    <rect x="120" y="120" width="272" height="272" rx="32" transform="rotate(45 256 256)" 
+          fill="#0D0D14" stroke="url(#neon-purple-blue)" stroke-width="4"/>
+
+    <!-- Central Futuristic 'Z' Emblem -->
+    <path d="M 180 180 L 332 180 L 332 216 L 244 300 L 332 300 L 332 336 L 180 336 L 180 300 L 268 216 L 180 216 Z" 
+          fill="url(#silver-grad)"/>
+
+    <!-- Accent Gems -->
+    <circle cx="256" cy="96" r="8" fill="#9B5CFF" filter="url(#glow)" />
+    <circle cx="416" cy="256" r="8" fill="#368BFF" filter="url(#glow)" />
+    <circle cx="256" cy="416" r="8" fill="#9B5CFF" filter="url(#glow)" />
+    <circle cx="96" cy="256" r="8" fill="#368BFF" filter="url(#glow)" />
+    
+    <!-- Text ZYCOOBUX -->
+    <text x="256" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="url(#silver-grad)" letter-spacing="6">
+      ZYCOOBUX
+    </text>
+  </svg>
